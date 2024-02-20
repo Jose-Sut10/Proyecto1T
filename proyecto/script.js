@@ -32,7 +32,7 @@ if("SI" == casado.toUpperCase()){
 let hijos = prompt("¿Tiene hijos o hijas?")
 //Comprobamos la cantidad de hijos solamente si los tienen
 if("SI" == hijos.toUpperCase()){
-  var cantidad_hijos = parseInt(prompt('¡Cuántos hijos tiene?'))
+  var cantidad_hijos = parseInt(prompt('¡Cuántos hijos tiene?'));
 }
 /**
  * 1. convierta la cantidad de hijos a numero
@@ -44,9 +44,18 @@ if("SI" == hijos.toUpperCase()){
 //Ejemplo (Debe completar los condicionales): Recargo por edad del asegurado 
 if(edad>=18 && edad<25){
   //Calculamos el recargo en base a la edad 
-  recargo = precio_base * edad_18
+  recargo = precio_base * edad_18;
   //Sumamos todos los recargos que hemos obtenido
-  recargo_total = recargo_total + recargo
+  recargo_total = recargo_total + recargo;
+}else if(edad>=25 && edad<50){
+  //Calculamos el recargo en base a la edad 
+  recargo = precio_base * edad_25;
+  //Sumamos todos los recargos que hemos obtenido
+  recargo_total = recargo_total + recargo;
+}else if(edad>=50){
+  recargo = precio_base * edad_50;
+  //Sumamos todos los recargos que hemos obtenido
+  recargo_total = recargo_total + recargo;
 }
 //aqui puede colocar un else if() con el siguiente rango
 
